@@ -34,7 +34,7 @@ public class ListaDeProdutos {
     }
 
     public void mostrarProduto() {
-        System.out.print("Sua lista de produtos após a remoção: " + this.produtos);
+        System.out.print("Sua lista de produtos após as atualizações: " + this.produtos);
     }
 
     public void removerProduto() {
