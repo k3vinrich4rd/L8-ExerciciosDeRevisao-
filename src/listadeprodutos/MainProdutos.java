@@ -33,11 +33,13 @@ public class MainProdutos {
 
             }
 
+
         }
         System.out.println("\nAgradecemos por ser a sua preferência, volte sempre <3");
         System.out.println("A sua lista após a remoção: " + listaDeProdutos.getProdutos());
 
     }
+
 
 }
 
