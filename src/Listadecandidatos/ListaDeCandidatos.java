@@ -10,7 +10,7 @@ public class ListaDeCandidatos {
     public int quantidadeDeCandidatos;
     public String respostas;
 
-    public ListaDeCandidatos(int numeroDaMatricula, double nota, HashMap<Integer, Double> candidatos, int quantidadeDeCandidatos, String respostas) {
+    public ListaDeCandidatos() {
         this.numeroDaMatricula = numeroDaMatricula;
         this.nota = nota;
         this.candidatos = candidatos;
@@ -20,21 +20,35 @@ public class ListaDeCandidatos {
 
     public void adicionarCandidatos() {
         Scanner input1 = new Scanner(System.in);
-        System.out.println("Quantos candidatos você gostaria de adicionar? ");
+        System.out.print("\nQuantos candidatos você gostaria de adicionar?: ");
         quantidadeDeCandidatos = input1.nextInt();
 
         for (int i = 0; i < quantidadeDeCandidatos; i++) {
-            System.out.println("Informe o número da matricula do(a) " + (1 + i) + "º candidato(a)");
+            System.out.print("Informe o número da matricula do(a) " + (1 + i) + "º candidato(a): ");
             this.numeroDaMatricula = input1.nextInt();
-            System.out.println("Informe a nota do(a) " + (i + 1) + "º candidato");
+            System.out.print("Informe a nota do(a) " + (i + 1) + "º candidato: ");
             this.nota = input1.nextInt();
             candidatos.put(getNumeroDaMatricula(), getNota());
         }
 
     }
-        public void mostrarAlunos(){
-            System.out.println("Lista de candidatos após as atualizações ");
+
+    public void mostrarAlunos() {
+        System.out.println("\nLista de candidatos após as atualizações " + candidatos);
+    }
+
+    public void removerCandidato() {
+        Scanner input2 = new Scanner(System.in);
+        System.out.print("Quantos candidatos você gostaria de remover?: ");
+        quantidadeDeCandidatos = input2.nextInt();
+
+        for (int i = 0; i < quantidadeDeCandidatos; i++) {
+            System.out.print("Informe o número da matricula do(a) " + (i + 1) + "º candidato(a): ");
+            this.numeroDaMatricula = input2.nextInt();
+            candidatos.remove(numeroDaMatricula);
         }
+    }
+
 
     public int getNumeroDaMatricula() {
         return numeroDaMatricula;
