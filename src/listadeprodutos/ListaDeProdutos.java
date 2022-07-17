@@ -39,11 +39,11 @@ public class ListaDeProdutos {
 
     public void removerProduto() {
         System.out.println("Sua lista de produtos " + produtos);
-        System.out.print("Informe quantos produtos você gostaria de remover: ");
+        System.out.print("\nInforme quantos produtos você gostaria de remover: ");
         Scanner input2 = new Scanner(System.in);
         quantidadeDeProdutos = input2.nextInt();
 
-        System.out.println("Sua lista de produtos: " + produtos);
+        System.out.println("Estado da sua lista de produtos : " + produtos);
 
         for (int i = 0; i < quantidadeDeProdutos; i++) {
             System.out.print("Informe o nome do " + (i + 1) + "º que você deseja remover ");

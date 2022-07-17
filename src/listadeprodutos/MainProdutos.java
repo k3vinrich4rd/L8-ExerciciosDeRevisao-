@@ -10,7 +10,7 @@ public class MainProdutos {
         ListaDeProdutos listaDeProdutos = new ListaDeProdutos();
         int respostaDoUsuario = 0;
 
-        System.out.print("\nVocê gostaria de adicionar mais algum produto na sua lista? ([1] - sim / [2] - não): ");
+        System.out.print("\nVocê gostaria de adicionar algum produto na sua lista? ([1] - sim / [2] - não): ");
         respostaDoUsuario = input.nextInt();
 
         if (respostaDoUsuario == 1) {
@@ -21,13 +21,14 @@ public class MainProdutos {
 
             } while (respostaDoUsuario == 1);
 
-            System.out.print("Você gostaria de remover algum item da sua lista?  ([1] - sim [2] - não): ");
+            listaDeProdutos.mostrarProduto();
+            System.out.print("\nVocê gostaria de remover algum item da sua lista?  ([1] - sim [2] - não): ");
             respostaDoUsuario = input.nextInt();
 
             if (respostaDoUsuario == 1) {
                 do {
                     listaDeProdutos.removerProduto();
-                    System.out.print("Você gostaria de remover mais algum item da sua lista ([1] - sim / [2] - não): ");
+                    System.out.print("\nVocê gostaria de remover mais algum item da sua lista ([1] - sim / [2] - não): ");
                     respostaDoUsuario = input.nextInt();
                 } while (respostaDoUsuario == 1);
 
@@ -36,7 +37,7 @@ public class MainProdutos {
 
         }
         System.out.println("\nAgradecemos por ser a sua preferência, volte sempre <3");
-        System.out.println("A sua lista após a remoção: " + listaDeProdutos.getProdutos());
+        System.out.println("A sua lista após as atualizações: " + listaDeProdutos.getProdutos());
 
     }
 
