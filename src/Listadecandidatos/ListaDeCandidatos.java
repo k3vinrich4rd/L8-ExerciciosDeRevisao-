@@ -34,7 +34,7 @@ public class ListaDeCandidatos {
     }
 
     public void mostrarAlunos() {
-        System.out.println("\nLista de candidatos após as atualizações " + candidatos);
+        System.out.println("\nLista de candidatos após as atualizações " + this.getCandidatos());
     }
 
     public void removerCandidato() {
